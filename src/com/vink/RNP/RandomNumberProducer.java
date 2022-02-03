@@ -131,8 +131,8 @@ public class RandomNumberProducer {
         int flag2 = JOptionPane.showOptionDialog(null, "Exit Or Save", "Choose", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options2, "Exit");
         if (flag2 == 1) {
             FileSystemView fsv = FileSystemView.getFileSystemView();
-
             String path = fsv.getDefaultDirectory().getPath() + "/result.txt";
+            
             byte[] bytes = sb.toString().getBytes(StandardCharsets.UTF_8);
 
             try (var fos = new FileOutputStream(path)) {
